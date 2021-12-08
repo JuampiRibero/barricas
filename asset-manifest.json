@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/barricas/static/css/main.c91dc3c7.chunk.css",
+    "main.js": "/barricas/static/js/main.cd772a78.chunk.js",
+    "main.js.map": "/barricas/static/js/main.cd772a78.chunk.js.map",
+    "runtime-main.js": "/barricas/static/js/runtime-main.fee9d720.js",
+    "runtime-main.js.map": "/barricas/static/js/runtime-main.fee9d720.js.map",
+    "static/css/2.383c0125.chunk.css": "/barricas/static/css/2.383c0125.chunk.css",
+    "static/js/2.84b487c8.chunk.js": "/barricas/static/js/2.84b487c8.chunk.js",
+    "static/js/2.84b487c8.chunk.js.map": "/barricas/static/js/2.84b487c8.chunk.js.map",
+    "static/js/3.8a921eec.chunk.js": "/barricas/static/js/3.8a921eec.chunk.js",
+    "static/js/3.8a921eec.chunk.js.map": "/barricas/static/js/3.8a921eec.chunk.js.map",
+    "index.html": "/barricas/index.html",
+    "static/css/2.383c0125.chunk.css.map": "/barricas/static/css/2.383c0125.chunk.css.map",
+    "static/css/main.c91dc3c7.chunk.css.map": "/barricas/static/css/main.c91dc3c7.chunk.css.map",
+    "static/js/2.84b487c8.chunk.js.LICENSE.txt": "/barricas/static/js/2.84b487c8.chunk.js.LICENSE.txt",
+    "static/media/logo.9797c6ee.png": "/barricas/static/media/logo.9797c6ee.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fee9d720.js",
+    "static/css/2.383c0125.chunk.css",
+    "static/js/2.84b487c8.chunk.js",
+    "static/css/main.c91dc3c7.chunk.css",
+    "static/js/main.cd772a78.chunk.js"
+  ]
+}
