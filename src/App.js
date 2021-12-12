@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './container/ItemListContainer/ItemListContainer';
+import NavBar from './components/NavBar';
+import ItemListContainer from './container/ItemListContainer';
 
-function App() {
+const App = () => {
   return (
     <>
       <NavBar />
