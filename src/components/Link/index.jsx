@@ -14,7 +14,7 @@ const Secciones = [
 
 const Link = () => {
     const [secciones, setSecciones] = useState([]);
-    
+
     useEffect(() => {
         const promesaSecciones = new Promise((res, rej) => {
             res(Secciones);
