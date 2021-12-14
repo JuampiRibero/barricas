@@ -23,6 +23,8 @@ const ItemListContainer = () => {
         });
         promesaItems.then(res => setItems(res));
     }, []);
+
+    console.log(items);
     
     return (
         <div className="container py-5">

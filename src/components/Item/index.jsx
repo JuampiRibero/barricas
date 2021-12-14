@@ -7,11 +7,11 @@ const Item = ({item}) => {
     return (
         <Card className="m-3">
         <Card.Img variant="top" src={item.img} alt={item.nombre} title={item.nombre} loading="lazy" />
-        <Card.Body>
+        <Card.Body className="row">
             <Card.Title>{item.nombre}</Card.Title>
-            <Card.Text>$ {item.precio}</Card.Text>
+            <Card.Subtitle className="my-3">$ {item.precio}</Card.Subtitle>
             <Card.Text>{item.descripcion}</Card.Text>
-            <Button variant="primary">Detalle</Button>
+            <Button className="align-self-end">Detalle</Button>
         </Card.Body>
         </Card>
     )

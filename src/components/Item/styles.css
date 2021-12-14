@@ -1,4 +1,18 @@
 .card {
+    border: 3px solid #8f1248;
+    border-radius: 0.25rem;
     padding-right: 0px;
     padding-left: 0px;
+}
+
+.btn {
+    color: #fff;
+    background-color: #8f1248;
+    border-color: #8f1248;
+}
+
+.btn:hover {
+    color: #8f1248;
+    background-color: #fff;
+    border-color: #8f1248;
 }
