@@ -10,7 +10,7 @@ const Item = ({item}) => {
         <Card.Body className="row">
             <Card.Title>{item.nombre}</Card.Title>
             <Card.Subtitle className="my-3">$ {item.precio}</Card.Subtitle>
-            <Card.Text>{item.descripcion}</Card.Text>
+            {/* <Card.Text>{item.descripcion}</Card.Text> */}
             <Button className="align-self-end">Detalle</Button>
         </Card.Body>
         </Card>
