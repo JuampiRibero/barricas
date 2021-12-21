@@ -1,5 +1,11 @@
 .nav-link {
+    display: flex;
     color: #fff !important;
     margin-left: 16px;
     margin-right: 16px;
+    text-decoration: none;
+}
+
+.nav-link-bodega {
+    color: #000 !important;
 }
