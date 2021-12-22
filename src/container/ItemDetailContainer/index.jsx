@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
     }, [itemId]);
 
     return loading ? (
-        <h2>CARGANDO...</h2> 
+        <h2 className='p-5 text-center'>CARGANDO...</h2>  
     ) : (
         <div>
             <ItemDetail item = {item}/>

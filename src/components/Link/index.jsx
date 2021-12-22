@@ -6,18 +6,17 @@ import './styles.css';
 const Secciones = [
     {id: '1', nombre: 'INICIO', ruta: '/'},
     {id: '2', nombre: 'NOSOTROS', ruta: '/nosotros'},
-    {id: '3', nombre: 'SERVICIOS', ruta: '/servicios'},
-    {id: '4', nombre: 'TIENDA', ruta: '/tienda'},
-    {id: '5', nombre: 'CONTACTO', ruta: '/contacto'},
-    {id: '6', nombre: <CartWidget />, ruta: '/carrito'},
+    {id: '3', nombre: 'TIENDA', ruta: '/tienda'},
+    {id: '4', nombre: 'CONTACTO', ruta: '/contacto'},
+    {id: '5', nombre: <CartWidget />, ruta: '/carrito'},
 ]
 
 const Bodegas = [
-    {id: '4.1', nombre: 'BODEGA LUIGI BOSCA', ruta: '/bodega/luigi-bosca'},
-    {id: '4.2', nombre: 'BODEGA JORGE RUBIO', ruta: '/bodega/jorge-rubio'},
-    {id: '4.3', nombre: 'BODEGA LOS TONELES', ruta: '/bodega/los-toneles'},
-    {id: '4.4', nombre: 'BODEGA SANTA JULIA', ruta: '/bodega/santa-julia'},
-    {id: '4.5', nombre: 'BODEGA LAS PERDICES', ruta: '/bodega/las-perdices'},
+    {id: '3.1', nombre: 'LUIGI BOSCA', ruta: '/bodega/luigi bosca'},
+    {id: '3.2', nombre: 'JORGE RUBIO', ruta: '/bodega/jorge rubio'},
+    {id: '3.3', nombre: 'LOS TONELES', ruta: '/bodega/los toneles'},
+    {id: '3.4', nombre: 'SANTA JULIA', ruta: '/bodega/santa julia'},
+    {id: '3.5', nombre: 'LAS PERDICES', ruta: '/bodega/las perdices'},
 ]
 
 const ItemLink = () => {

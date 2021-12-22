@@ -1,40 +1,39 @@
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
+import UnderConstruction from './components/UnderConstruction';
+import NotFound from './components/NotFound';
 import ItemListContainer from './container/ItemListContainer';
 import ItemDetailContainer from './container/ItemDetailContainer';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <BrowserRouter>
       <NavBar />
       <Switch>
-        <Route exact path="/">
-
+        <Route exact path='/'>
+          <UnderConstruction />
         </Route>
-        <Route path="/nosotros">
-
+        <Route path='/nosotros'>
+          <UnderConstruction />
         </Route>
-        <Route path="/servicios">
-
-        </Route>
-        <Route path="/tienda">
+        <Route path='/tienda'>
           <ItemListContainer greeting={'PRODUCTOS'}/>
         </Route>
-        <Route path="/bodega/:bodegaId">
-          <ItemListContainer greeting={'FILTRO'}/>
+        <Route path='/bodega/:bodegaId'>
+          <ItemListContainer greeting={''}/>
         </Route>
-        <Route path="/detalle/:itemId">
+        <Route path='/detalle/:itemId'>
           <ItemDetailContainer />
         </Route>
-        <Route path="/contacto">
-
+        <Route path='/contacto'>
+          <UnderConstruction />
         </Route>
-        <Route path="/carrito">
-
+        <Route path='/carrito'>
+          <UnderConstruction />
         </Route>
-        <Route path="*">
-          <h1>404 - NOT FOUND</h1>
+        <Route path='*'>
+          <NotFound />
         </Route>
       </Switch>
     </BrowserRouter>

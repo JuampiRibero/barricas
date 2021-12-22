@@ -28,7 +28,7 @@ const ItemListContainer = ({greeting}) => {
     }, [bodegaId]);
     
     return loading ? (
-        <h2>CARGANDO...</h2> 
+        <h2 className='p-5 text-center'>CARGANDO...</h2> 
     ) : (
         <div className='container py-5'>
             <h3 className='text-center'>{greeting}</h3>

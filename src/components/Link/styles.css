@@ -7,5 +7,9 @@
 }
 
 .nav-link-bodega {
+    display: flex;
     color: #000 !important;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    text-decoration: none;
 }
