@@ -1,7 +1,7 @@
-import Items from '../../mocks';
-import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail';
+import Items from '../../mocks';
 
 const ItemDetailContainer = () => {
     const [item, setItems] = useState(null);

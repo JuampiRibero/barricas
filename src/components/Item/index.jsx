@@ -10,6 +10,7 @@ const Item = ({item}) => {
         <Card.Img variant='top' src={item?.img} alt={item?.nombre} title={item?.nombre} loading='lazy' />
         <Card.Body className='row'>
             <Card.Title>{item?.nombre}</Card.Title>
+            <Card.Subtitle className='my-3 text-uppercase'>Bodega {item?.bodega}</Card.Subtitle>
             <Card.Subtitle className='my-3'>$ {item?.precio}</Card.Subtitle>
             <Link to={`/detalle/${item?.id}`}>
                 <Button className='align-self-end'>Detalles</Button>

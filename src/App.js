@@ -1,8 +1,7 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import UnderConstruction from './components/UnderConstruction';
-import NotFound from './components/NotFound';
 import ItemListContainer from './container/ItemListContainer';
 import ItemDetailContainer from './container/ItemDetailContainer';
 
@@ -18,7 +17,7 @@ const App = () => {
           <UnderConstruction />
         </Route>
         <Route path='/tienda'>
-          <ItemListContainer greeting={'PRODUCTOS'}/>
+          <ItemListContainer greeting={'¡Bienvenidos a la tienda de Barricas!'}/>
         </Route>
         <Route path='/bodega/:bodegaId'>
           <ItemListContainer greeting={''}/>
@@ -33,7 +32,7 @@ const App = () => {
           <UnderConstruction />
         </Route>
         <Route path='*'>
-          <NotFound />
+          <Redirect to='/' />
         </Route>
       </Switch>
     </BrowserRouter>
