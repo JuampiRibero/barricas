@@ -39,6 +39,12 @@ Uso de React Router Dom para la navegación.
 
 
 
+## Funcionamiento de la App
+
+![Funcionamiento de Barricas]
+
+
+
 ### Autor
 
 Juan Pablo Ribero Mazzoni
