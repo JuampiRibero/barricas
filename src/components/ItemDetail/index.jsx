@@ -10,7 +10,7 @@ const ItemDetail = ({item}) => {
                 </div>
                 <div className='col-10 mx-auto col-md-6 my-3'>
                     <h1>{item?.nombre}</h1>
-                    <h4 className='text-title text-uppercase text-muted mt-3 mb-2'>
+                    <h4 className='text-title text-uppercase text-muted mt-3 mb-3'>
                         Bodega <span className='text-uppercase'>{item?.bodega}</span>
                     </h4>
                     <h4 className='text-blue'>
