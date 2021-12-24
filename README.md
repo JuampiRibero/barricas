@@ -41,7 +41,7 @@ Uso de React Router Dom para la navegación.
 
 ## Funcionamiento de la App
 
-![Funcionamiento de Barricas]
+![Funcionamiento de Barricas](https://github.com/JuampiRibero/barricas/blob/master/barricas.gif)
 
 
 
