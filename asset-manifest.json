@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/barricas/static/css/main.d61d842f.chunk.css",
-    "main.js": "/barricas/static/js/main.c5d1d4e6.chunk.js",
-    "main.js.map": "/barricas/static/js/main.c5d1d4e6.chunk.js.map",
+    "main.js": "/barricas/static/js/main.70d1dfe6.chunk.js",
+    "main.js.map": "/barricas/static/js/main.70d1dfe6.chunk.js.map",
     "runtime-main.js": "/barricas/static/js/runtime-main.e8f83804.js",
     "runtime-main.js.map": "/barricas/static/js/runtime-main.e8f83804.js.map",
     "static/css/2.383c0125.chunk.css": "/barricas/static/css/2.383c0125.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.383c0125.chunk.css",
     "static/js/2.7041e177.chunk.js",
     "static/css/main.d61d842f.chunk.css",
-    "static/js/main.c5d1d4e6.chunk.js"
+    "static/js/main.70d1dfe6.chunk.js"
   ]
 }
