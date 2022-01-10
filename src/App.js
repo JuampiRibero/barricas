@@ -4,9 +4,11 @@ import NavBar from './components/NavBar';
 import UnderConstruction from './components/UnderConstruction';
 import ItemListContainer from './container/ItemListContainer';
 import ItemDetailContainer from './container/ItemDetailContainer';
+import { CartProvider } from "./context/CartContext";
 
 const App = () => {
   return (
+    <CartProvider>
     <BrowserRouter>
       <NavBar />
       <Switch>
@@ -36,6 +38,7 @@ const App = () => {
         </Route>
       </Switch>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 

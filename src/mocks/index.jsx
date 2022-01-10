@@ -5,6 +5,7 @@ const Items = [
         nombre: 'LA LINDA MALBEC',
         bodega: 'luigi bosca',
         precio: 950,
+        stock: 5,
         descripcion: 'Característico color rojo intenso. Aromas a guinda y especias. En boca se perciben taninos equilibrados debido a 3 meses de añejamiento en roble francés. Aterciopelado. De buena estructura, fino, moderno.'
     },
     {
@@ -13,6 +14,7 @@ const Items = [
         nombre: 'LUIGI BOSCA MALBEC',
         bodega: 'luigi bosca',
         precio: 1700,
+        stock: 5,
         descripcion: 'Color rojo rubí intenso. Presenta aromas de frutos rojos maduros, especias y pimienta negra. La intensidad de su entrada en boca se complementa con la suavidad y dulzor de los taninos. Un vino de gran cuerpo y estructura.'
     },
     {
@@ -21,6 +23,7 @@ const Items = [
         nombre: 'FINCA GABRIEL MALBEC',
         bodega: 'jorge rubio',
         precio: 638,
+        stock: 5,
         descripcion: 'Color rojo violáceo oscuro. Aroma intenso a frutas secas. Redondo y una acidez muy equilibrada.'
     },
     {
@@ -29,6 +32,7 @@ const Items = [
         nombre: 'CORDERO CON PIEL DE LOBO MALBEC',
         bodega: 'los toneles',
         precio: 785,
+        stock: 5,
         descripcion: 'Un Malbec joven muy bien elaborado, diferente por su aroma y sabor a frutos maduros. Con una acidez justa deja en boca un picor agradable con un final reforzado por su paso por madera.'
     },
     {
@@ -37,6 +41,7 @@ const Items = [
         nombre: 'PERRO CALLEJERO BLEND DE MALBEC',
         bodega: 'los toneles',
         precio: 1270,
+        stock: 5,
         descripcion: 'Perro Callejero, fiel a sus convicciones e incansable buscador. Guiado por su olfato enfrenta día a día su propio destino. Perro Callejero que busca ese hueso de oro hasta las últimas consecuencias. No intentes domesticarlo, él es su propio dueño.'
     },
     {
@@ -45,6 +50,7 @@ const Items = [
         nombre: 'SANTA JULIA RESERVA MALBEC',
         bodega: 'santa julia',
         precio: 710,
+        stock: 5,
         descripcion: 'Color violeta brillante atractivo. Aromas frescos de la zarzamora, violetas y guindas. Excelente estructura, con sabores especiados y de frutas maduras. Final aterciopelado y largo.'
     },
     {
@@ -53,6 +59,7 @@ const Items = [
         nombre: 'CHAC CHAC MALBEC',
         bodega: 'las perdices',
         precio: 990,
+        stock: 5,
         descripcion: 'Color rojo violáceo intenso. Gran concentración, a la nariz presenta aromas a frutos rojos, mermelada de ciruelas y frutillas. En boca predomina también la presencia de frutos rojos, es elegante, amable y muy complejo. Final largo y untuoso.'
     },
     {
@@ -61,6 +68,7 @@ const Items = [
         nombre: 'LAS PERDICES MALBEC',
         bodega: 'las perdices',
         precio: 980,
+        stock: 5,
         descripcion: 'Color rojo violáceo intenso. De complejos aromas a frutas rojas, con delicados toques de madera. Suave en boca, equilibrado, con notas de ciruelas y guindas.'
     },
     {
@@ -69,6 +77,7 @@ const Items = [
         nombre: 'LA LINDA CABERNET SAUVIGNON',
         bodega: 'luigi bosca',
         precio: 950,
+        stock: 5,
         descripcion: 'De color rojo granate con tintes negruzcos. Se sienten aromas a blackberries, pimienta negra y mora. En boca es persistente, intenso, especiado, de taninos jóvenes resultantes de sus 3 meses de añejamiento en roble francés y americano.'
     },
     {
@@ -77,6 +86,7 @@ const Items = [
         nombre: 'LUIGI BOSCA CABERNET SAUVIGNON',
         bodega: 'luigi bosca',
         precio: 1700,
+        stock: 5,
         descripcion: 'Rojo rubí, brillante, limpio. Fresco, frutado aterciopelado. Aromas de frutas rojas y negras, violetas y chocolate. De gran estructura y cuerpo, un vino de carácter y exquisita elegancia.'
     },
     {
@@ -85,6 +95,7 @@ const Items = [
         nombre: 'LAS PERDICES CABERNET SAUVIGNON',
         bodega: 'las perdices',
         precio: 980,
+        stock: 5,
         descripcion: 'Color rojo rubí intenso. Aromas de cerezas con sutiles notas de pimienta y suaves aportes de la madera. Suave en boca, balanceado, con aromas a cerezas y cassis.'
     },
     {
@@ -93,6 +104,7 @@ const Items = [
         nombre: 'FINCA GABRIEL SYRAH',
         bodega: 'jorge rubio',
         precio: 638,
+        stock: 5,
         descripcion: 'Color rojo oscuro con tonos violáceos muy intensos. Aromas de zarzamora y frambuesa. Un vino con mucho cuerpo, textura aterciopelada y un final en boca equilibrado.'
     },
     {
@@ -101,6 +113,7 @@ const Items = [
         nombre: 'SANTA JULIA CHENIN DULCE NATURAL',
         bodega: 'santa julia',
         precio: 530,
+        stock: 5,
         descripcion: 'Color amarillo verdoso de buena intensidad. Aroma a durazno blanco, damasco, hierbas frescas y algunas notas cítricas como limón y pomelo. En el sabor se distinguen una entrada dulce, notas cítricas, con un buen equilibrio entre la acidez y el azúcar natural.'
     },
     {
@@ -109,6 +122,7 @@ const Items = [
         nombre: 'CHAC CHAC SAUVIGNON BLANC',
         bodega: 'las perdices',
         precio: 990,
+        stock: 5,
         descripcion: 'Color amarillo verdoso muy sutil, notas de espárrago, ruda, pomelo rosado, con sutiles notas minerales. En boca, buen ataque, acidez marcada y final prolongado, remarcando las notas típicas de la variedad.'
     },
     {
@@ -117,6 +131,7 @@ const Items = [
         nombre: 'FINCA GABRIEL CHARDONNAY',
         bodega: 'jorge rubio',
         precio: 638,
+        stock: 5,
         descripcion: 'Color amarillo con tonos verdes muy vivaces. Aroma intenso que recuerda a bananas y ananá. Sabor fresco con entrada dulce en boca.'
     },
 ];

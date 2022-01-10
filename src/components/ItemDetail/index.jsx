@@ -1,7 +1,16 @@
 import React from 'react';
+import ItemCount from '../ItemCount';
+import { useCartContext } from '../../context/CartContext';
 import './styles.css';
 
-const ItemDetail = ({item}) => {
+const ItemDetail = ({ item }) => {
+
+    const onAdd = (quantity) => {
+        addItem(item, quantity);
+    }
+
+    const {addItem} = useCartContext();
+
     return (
         <div className='container text-start justify-content-around'>
             <div className='row'>
@@ -15,6 +24,8 @@ const ItemDetail = ({item}) => {
                     </h4>
                     <h4 className='text-blue'>
                         <strong>${item?.precio}</strong>
+                        <p className='text-muted lead mt-3'>Stock: {item?.stock}</p>
+                        <ItemCount stock={item?.stock} initial={0} onAdd={onAdd} />
                         <hr></hr>
                         <p className='font-weight-bold mt-3 mb-0'>Información sobre el producto:</p>
                         <p className='text-muted lead'>{item?.descripcion}</p>
