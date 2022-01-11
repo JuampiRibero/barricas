@@ -7,39 +7,30 @@ const ItemCount = ({stock, initial, onAdd}) => {
     const [quantity, setQuantity] = useState(parseInt(initial));
     const [changeBtn, setChangeBtn] = useState(true);
 
-
-    const addCount = () => {
-        if(quantity < stock) {
-            setQuantity(quantity + 1);
-        } else {
-            alert('Alcanzaste el máximo stock disponible.');
-        };
+    const addQuantity = () => {
+        quantity < stock ? setQuantity(quantity + 1) : alert('Alcanzaste el máximo de stock disponible.');
     };
 
-    const reduceCount = () => {
-        if(quantity > 0) {
-            setQuantity(quantity - 1);
-        };
+    const reduceQuantity = () => {
+        quantity === 1 ? setQuantity(1) : setQuantity(quantity - 1);
     };
 
     const addToCart = () => {
-        if(quantity <= stock) {
-            onAdd(quantity);
-            setChangeBtn(false);
-        };
+        onAdd(quantity);
+        setChangeBtn(false);
     };
 
     return (
         <div>
             <div className='my-3'>
-                <Button variant="info" size="sm" onClick={reduceCount}>-</Button>
+                <Button variant="info" size="sm" onClick={reduceQuantity}>-</Button>
                 <Button variant="outline-info" size="sm" disabled className='mx-1'>{quantity}</Button>
-                <Button variant="info" size="sm" onClick={addCount}>+</Button><br/>
+                <Button variant="info" size="sm" onClick={addQuantity}>+</Button><br/>
                 { changeBtn ?
-
                 <Button variant="info" size="sm" onClick = {addToCart}>Agregar al Carrito</Button>
                 :
                 <div>
+                    <Button variant="info" size="sm" onClick = {addToCart}>Agregar al Carrito</Button><br/>
                     <Link to= "/tienda">
                         <Button variant="info" size="sm">Seguir Comprando</Button><br/>
                     </Link>

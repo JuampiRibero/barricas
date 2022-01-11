@@ -4,12 +4,10 @@ import { useCartContext } from '../../context/CartContext';
 import './styles.css';
 
 const ItemDetail = ({ item }) => {
-
+    const { addItem } = useCartContext();
     const onAdd = (quantity) => {
         addItem(item, quantity);
     }
-
-    const {addItem} = useCartContext();
 
     return (
         <div className='container text-start justify-content-around'>

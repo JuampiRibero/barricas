@@ -21,7 +21,7 @@ export const CartProvider = ({ children }) => {
                 cart[index] = { item: item, quantity: currentQuantity + quantity };
                 setQuantityInCart(quantityInCart + quantity);
             } else {
-                alert('No hay más stock disponible.');
+                alert(`No hay más stock disponible de ${item.nombre}`);
             }
         };
     };
