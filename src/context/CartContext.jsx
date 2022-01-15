@@ -1,11 +1,10 @@
-import React, { createContext, useContext, useState} from 'react';
+import { createContext, useContext, useState} from 'react';
 
 const CartContext = createContext([]);
 
 export const useCartContext = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
-
     const [cart, setCart] = useState([]);
     const [quantityInCart, setQuantityInCart] = useState(0);
 
@@ -20,25 +19,21 @@ export const CartProvider = ({ children }) => {
             if(currentQuantity + quantity <= item.stock) {
                 cart[index] = { item: item, quantity: currentQuantity + quantity };
                 setQuantityInCart(quantityInCart + quantity);
-            } else {
-                alert(`No hay más stock disponible de ${item.nombre}`);
-            }
+            };
         };
     };
-
-    console.log(cart);
 
     const removeItem = (itemId) => {
         const index = isInCart(itemId);
     
         if(index > -1) {
-            const qy = cart[index].qy;
-            setQuantityInCart(quantityInCart - qy);
+            const quantity = cart[index].quantity;
+            setQuantityInCart(quantityInCart - quantity);
             cart.splice(index, 1);
         };
     };
 
-    const clear = () => {
+    const clearCart = () => {
         setCart([]);
         setQuantityInCart(0);
     };
@@ -50,14 +45,17 @@ export const CartProvider = ({ children }) => {
         while (i < length && index === -1) {
             if(cart[i].item.id === itemId) {
                 index = i;
+            } else {
+                i++;
             }
-            i++;
         };
         return index;
     };
 
+    console.log(cart);
+
     return (
-        <CartContext.Provider value={{ cart, addItem, removeItem, clear, isInCart, quantityInCart, setQuantityInCart }}>
+        <CartContext.Provider value={{ cart, setCart, quantityInCart, setQuantityInCart, addItem, removeItem, clearCart, isInCart }}>
             { children }
         </CartContext.Provider>
     );

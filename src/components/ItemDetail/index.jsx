@@ -22,8 +22,7 @@ const ItemDetail = ({ item }) => {
                     </h4>
                     <h4 className='text-blue'>
                         <strong>${item?.precio}</strong>
-                        <p className='text-muted lead mt-3'>Stock: {item?.stock}</p>
-                        <ItemCount stock={item?.stock} initial={0} onAdd={onAdd} />
+                        <ItemCount stock={item?.stock} initial={item?.stock >= 1 ? 1 : 0} onAdd={onAdd} />
                         <hr></hr>
                         <p className='font-weight-bold mt-3 mb-0'>Información sobre el producto:</p>
                         <p className='text-muted lead'>{item?.descripcion}</p>
