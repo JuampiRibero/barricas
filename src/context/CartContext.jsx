@@ -28,10 +28,14 @@ export const CartProvider = ({ children }) => {
         setCart([]);
     };
 
+    const totalCart = () => {
+        return cart.reduce( (acum, valor) => acum + valor.quantity * valor.item.precio, 0);
+    };
+
     console.log(cart);
 
     return (
-        <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clearCart }}>
+        <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clearCart, totalCart }}>
             { children }
         </CartContext.Provider>
     );
