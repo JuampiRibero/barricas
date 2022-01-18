@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import UnderConstruction from './components/UnderConstruction';
 import ItemListContainer from './container/ItemListContainer';
 import ItemDetailContainer from './container/ItemDetailContainer';
+import Cart from "./components/Cart";
 import { CartProvider } from "./context/CartContext";
 
 const App = () => {
@@ -30,8 +31,7 @@ const App = () => {
         <Route path='/contacto'>
           <UnderConstruction />
         </Route>
-        <Route path='/carrito'>
-          <UnderConstruction />
+        <Route path='/carrito' component= {Cart}>
         </Route>
         <Route path='*'>
           <Redirect to='/' />

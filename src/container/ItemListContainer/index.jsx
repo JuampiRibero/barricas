@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList';
+import { getFirestore } from '../../firebase';
 import Items from '../../mocks';
 
 const ItemListContainer = ({greeting}) => {
@@ -26,6 +27,12 @@ const ItemListContainer = ({greeting}) => {
             })
             .finally(() => setLoading(false));
     }, [bodegaId]);
+
+    // useEffect(() => {
+    //     const bd = getFirestore();
+    //     const itemCollection = bd.collection('items');
+    //     itemCollection.get().then((value) => let aux = value.doc.map((element) => { return { ...element.data(), id: element.id} });
+    // }, []);
     
     return loading ? (
         <h2 className='p-5 text-center'>CARGANDO...</h2> 
