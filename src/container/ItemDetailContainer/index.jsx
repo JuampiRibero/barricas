@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail';
 import Items from '../../mocks';
+import Loader from '../../components/Loader';
 
 const ItemDetailContainer = () => {
-    const [item, setItems] = useState(null);
+    const [item, setItem] = useState(null);
     const [loading, setLoading] = useState(true);
     const { itemId } = useParams();
 
@@ -20,16 +21,16 @@ const ItemDetailContainer = () => {
 
         getItems
             .then((res) => {
-                setItems(res);
+                setItem(res);
             })
             .finally(() => setLoading(false));
     }, [itemId]);
 
     return loading ? (
-        <h2 className='p-5 text-center'>CARGANDO...</h2>  
+        <h2 className='p-5 text-center'><Loader/></h2>  
     ) : (
         <div>
-            <ItemDetail item = {item}/>
+            <ItemDetail item={item}/>
         </div>
     )
 }

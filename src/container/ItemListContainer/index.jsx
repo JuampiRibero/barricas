@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList';
-import { getFirestore } from '../../firebase';
 import Items from '../../mocks';
+import Loader from '../../components/Loader';
 
 const ItemListContainer = ({greeting}) => {
     const [items, setItems] = useState([]);
@@ -27,20 +27,14 @@ const ItemListContainer = ({greeting}) => {
             })
             .finally(() => setLoading(false));
     }, [bodegaId]);
-
-    // useEffect(() => {
-    //     const bd = getFirestore();
-    //     const itemCollection = bd.collection('items');
-    //     itemCollection.get().then((value) => let aux = value.doc.map((element) => { return { ...element.data(), id: element.id} });
-    // }, []);
     
     return loading ? (
-        <h2 className='p-5 text-center'>CARGANDO...</h2> 
+        <h2 className='p-5 text-center'><Loader/></h2> 
     ) : (
         <div className='container py-5'>
             <h3 className='text-center'>{greeting}</h3>
             <div className='row row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center'>
-                <ItemList items = {items}/>
+                <ItemList items={items}/>
             </div>
         </div>
     )
