@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail';
-import Items from '../../mocks';
 import Loader from '../../components/Loader';
+import { getFirestore } from '../../firebase';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null);
@@ -10,20 +10,28 @@ const ItemDetailContainer = () => {
     const { itemId } = useParams();
 
     useEffect(() => {
-        setLoading(true);
-        const getItems = new Promise((res, rej) => {
-            setTimeout(() => {
-                const miBusqueda = Items.find(item => item.id === itemId);
-
-                res(miBusqueda);
-            }, 2000);
-        });
-
-        getItems
-            .then((res) => {
-                setItem(res);
-            })
-            .finally(() => setLoading(false));
+        setLoading (true);
+        const db = getFirestore();
+        const itemCollection = db.collection('items');
+        setTimeout(() => {
+            itemCollection.get().then((value) => {
+                if(value === 0) {
+                    console.log('No results!');
+                }
+                let aux = value.docs.map((doc) => { 
+                    return { ...doc.data(), id: doc.id };
+                });
+                let single = aux.find((e) => {
+                    return e.id === itemId;
+                });
+                console.log(single);
+                setItem(single);
+            }).catch((error) => {
+                console.log('Error searching items', error);
+            }).finally(() => {
+                setLoading(false);
+            });
+        }, 2000);
     }, [itemId]);
 
     return loading ? (
