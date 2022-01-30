@@ -21,10 +21,10 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls='basic-navbar-nav' />
                 <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav className='me-auto'>
-                        <ItemLink />
                         <NavDropdown title='BODEGA' id='basic-nav-dropdown'>
                             <ItemLinkBodega />
                         </NavDropdown>
+                        <ItemLink />
                     </Nav>
                 </Navbar.Collapse>
             </Container>

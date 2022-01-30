@@ -12,11 +12,11 @@ const Secciones = [
 ]
 
 const Bodegas = [
-    {id: '3.1', nombre: 'LUIGI BOSCA', ruta: '/bodega/luigi bosca'},
-    {id: '3.2', nombre: 'JORGE RUBIO', ruta: '/bodega/jorge rubio'},
-    {id: '3.3', nombre: 'LOS TONELES', ruta: '/bodega/los toneles'},
-    {id: '3.4', nombre: 'SANTA JULIA', ruta: '/bodega/santa julia'},
-    {id: '3.5', nombre: 'LAS PERDICES', ruta: '/bodega/las perdices'},
+    {id: '3.1', nombre: 'LUIGI BOSCA', ruta: '/bodega/Luigi Bosca'},
+    {id: '3.2', nombre: 'JORGE RUBIO', ruta: '/bodega/Jorge Rubio'},
+    {id: '3.3', nombre: 'LOS TONELES', ruta: '/bodega/Los Toneles'},
+    {id: '3.4', nombre: 'SANTA JULIA', ruta: '/bodega/Santa Julia'},
+    {id: '3.5', nombre: 'LAS PERDICES', ruta: '/bodega/Las Perdices'},
 ]
 
 const ItemLink = () => {

@@ -14,7 +14,19 @@
 .nav-link-bodega {
     display: flex;
     color: #000 !important;
-    margin-bottom: 16px;
-    margin-top: 16px;
+    margin-bottom: 8px;
+    margin-top: 8px;
     text-decoration: none;
+}
+
+.nav-link-bodega:hover {
+    display: flex;
+    color: #000 !important;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(143,18,72,.50);
+}
+
+.dropdown-menu {
+    border: 2px solid rgba(143,18,72,.50);
+    opacity: 0.85;
 }

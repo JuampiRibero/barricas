@@ -12,29 +12,32 @@ const Cart = () => {
     return (
         <div className="flex flex-col items-center min-h-screen h-full text-center py-12 space-y-4 mt-14">
             {cart.length > 0 ? (
-                <>
-                {cart.map((prod) => {
-                return <ItemCart
-                    key={prod.item.id}
-                    productos={prod}
-                    removeItem={removeItem}
-                />
-                })}
-                </>
+                <div className='py-5'>
+                    {cart.map((prod) => {
+                    return <ItemCart
+                        key={prod.item.id}
+                        productos={prod}
+                        removeItem={removeItem}
+                    />
+                    })}
+                </div>
             ) : (
-                <>
-                <h2 className='deliFont'>¡El carrito está vacío!</h2>
-                <Button as={Link} to={`/tienda`} variant='outline-primary' className='deliFont'>Empezá a comprar</Button>
-                </>
+                <div className='min-vh-100 py-5'>
+                    <h2 className='pb-4'>¡El carrito está vacío!</h2>
+                    <Button as={Link} to={`/tienda`} variant="info" size="sm">Empezá a comprar</Button>
+                </div>
             )}
             {cart.length > 0 && (
-                <>
-                    <div className="flex justify-between mx-2  h-full shadow-md rounded-md max-w-lg w-full py-4 px-2 lg:px-4 text-lg font-bold">
-                        <p className='bgTotal cartTotal'>Total: $ {total}</p>
+                <div className='pb-5'>
+                    <div className='mx-2 pb-4 px-2 lg:px-4'>
+                        <p className='bg-total cart-total'>Total: $ {total}</p>
                     </div>
-                    <Button as={Link} to={`/tienda`} variant='outline-primary' className='mx-3'>Seguir Comprando</Button>
-                    <Button onClick={() => clearCart()} variant='outline-primary' className='mx-3'>Vaciar Carrito</Button>
-                </>
+                    <div className='d-flex justify-content-center no-wrap'>
+                        <Button as={Link} to={`/tienda`} variant="info" size="sm" className='mx-3'>Seguir Comprando</Button>
+                        <Button onClick={() => clearCart()} variant="info" size="sm" className='mx-3'>Vaciar Carrito</Button>
+                        <Button as={Link} to={`/tienda`} variant="info" size="sm" className='mx-3'>Terminar Compra</Button>
+                    </div>
+                </div>
             )}
         </div>
     )

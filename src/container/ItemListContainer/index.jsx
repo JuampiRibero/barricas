@@ -21,11 +21,11 @@ const ItemListContainer = ({greeting}) => {
                 let aux = value.docs.map((doc) => { 
                     return { ...doc.data(), id: doc.id };
                 });
-                const miFiltro = bodegaId 
-                ? aux.filter(item => item.bodega === bodegaId)
+                const miFiltro = bodegaId
+                ? aux.filter((item) => item.bodega === bodegaId)
                 : aux;
-                console.log(aux);
-                setItems(aux);
+                console.log(miFiltro);
+                setItems(miFiltro);
             }).catch((error) => {
                 console.log('Error searching items', error);
             }).finally(() => {

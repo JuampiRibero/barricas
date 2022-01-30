@@ -1,87 +1,70 @@
-.cartThumbnail {
-  max-width: 100%;
-  max-height: 20vh;
-  object-fit: cover;
-  overflow: hidden !important;
-  border-radius: 1em;
-  padding: 0;
-  margin:0;
-}
-
-.cartContainer {
-  padding: 1em;
-}
-
-.cartTitle {
-  font-size: 1em;
-  font-weight: 500;
-}
-
-.cartHeader {
-  font-size: 1.4em;
-}
-
-.cartPrice {
-  font-size: 1.1em;
-  text-align: right;
-}
-
-.bgTotal {
-  background: gray;
-}
-
-.cartTotal {
-  font-size: 1.5em;
-  text-align: right;
-  color: white;
-  font-weight: bolder;
-}
-
-.removeItem:hover {
-  color: red;
-  font-size: large;
-}
-
-.cartContactData {
-  font-size: 1.1em;
-}
-
-.noFormatButton {
-  background: none;
-  border: none;
-}
-
-@media(max-width: 767px) {
-  .cartTotal {
-    font-size: 1.1em;
-  }
-
-  .cartThumbnail {
+.cart-thumbnail {
     max-width: 100%;
-    max-height: 40vh;
-  }
+    max-height: 20vh;
+    object-fit: cover;
+    overflow: hidden !important;
+    border-radius: 1em;
+}
 
-  .cartContainer {
-    padding: 0em;
-  }
+.cart-container {
+    padding: 1em;
+}
 
-  .cartTitle {
-    font-size: .8em;
-    font-weight: 500;
-  }
+.cart-header {
+    font-size: 1.4em;
+}
 
-  .cartHeader {
-    font-size: 1.2em;
-  }
-  
-  .cartPrice {
-    font-size: .7em;
+.cart-price {
+    font-size: 1.1em;
     text-align: right;
-  }
+}
 
-  .cartContactData {
+.bg-total {
+    background: #8f1248;
+}
+
+.cart-total {
+    font-size: 1.5em;
+    text-align: right;
+    color: white;
+    font-weight: bolder;
+}
+
+/* .cartContactData {
+  font-size: 1.1em;
+} */
+
+.btn-no-format {
+    background: none;
+    border: none;
+}
+
+@media(max-width: 992px) {
+    .cart-total {
+        font-size: 1.1em;
+    }
+
+    .cart-thumbnail {
+        max-width: 100%;
+        max-height: 40vh;
+    }
+
+    .cart-container {
+        padding: 0em;
+    }
+
+    .cart-header {
+        font-size: 1.2em;
+    }
+  
+    .cart-price {
+        font-size: .7em;
+        text-align: right;
+    }
+
+  /* .cartContactData {
     margin-top: 2em;
     font-size: 1.1em;
-  }
+  } */
 
 }

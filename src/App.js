@@ -5,6 +5,7 @@ import UnderConstructionContainer from "./container/UnderConstruction";
 import ItemListContainer from './container/ItemListContainer';
 import ItemDetailContainer from './container/ItemDetailContainer';
 import Cart from "./components/Cart";
+import Footer from "./components/Footer";
 import { CartProvider } from "./context/CartContext";
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
           <Redirect to='/' />
         </Route>
       </Switch>
+      <Footer />
     </BrowserRouter>
     </CartProvider>
   );
