@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom'
-import ItemCart from '../ItemCart'
-import { useCartContext } from '../../context/CartContext'
-import { Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
+import ItemCart from '../ItemCart';
+import { useCartContext } from '../../context/CartContext';
+import { Button } from 'react-bootstrap';
 import './styles.css';
 
 const Cart = () => {
-
     const { cart, removeItem, clearCart, totalCart } = useCartContext();
     const total = totalCart();
 
@@ -35,7 +34,9 @@ const Cart = () => {
                     <div className='d-flex justify-content-center no-wrap'>
                         <Button as={Link} to={`/tienda`} variant="info" size="sm" className='mx-3'>Seguir Comprando</Button>
                         <Button onClick={() => clearCart()} variant="info" size="sm" className='mx-3'>Vaciar Carrito</Button>
-                        <Button as={Link} to={`/tienda`} variant="info" size="sm" className='mx-3'>Terminar Compra</Button>
+                        <Link to={`/form`}>
+                            <Button variant="info" size="sm" className='mx-3'>Terminar Compra</Button>
+                        </Link>
                     </div>
                 </div>
             )}

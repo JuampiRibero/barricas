@@ -7,6 +7,7 @@ import ItemDetailContainer from './container/ItemDetailContainer';
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import { CartProvider } from "./context/CartContext";
+import Form from "./components/Form";
 
 const App = () => {
   return (
@@ -33,6 +34,9 @@ const App = () => {
           <UnderConstructionContainer />
         </Route>
         <Route path='/carrito' component={Cart}>
+        </Route>
+        <Route path='/form'>
+          <Form />
         </Route>
         <Route path='*'>
           <Redirect to='/' />
