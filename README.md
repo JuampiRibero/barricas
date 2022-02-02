@@ -5,9 +5,12 @@ Barricas es un e-commerce dedicado a la venta de vinos. Creado por un amante del
 Cuenta con:
 
 - Menú de navegación: utilizando React Router Dom.
-- Filtro por bodegas: tomando la bodega de cada vino de la base de datos.
-- Vista de la lista de vinos: vista general de vinos con foto y algunos detalles.
-- Vista de los detalles de vinos: vista con foto más grande y todos los detalles del vino.
+- Filtro por bodegas: tomando la bodega de cada vino de la base de datos de Firebase.
+- Vista de la lista de vinos: vista general de vinos con foto y algunos detalles trayéndolos de la base de datos de Firebase.
+- Vista de los detalles de vinos: vista con foto más grande y todos los detalles del vino trayéndolos de la base de datos de Firebase.
+- Vista del carrito de compras con los productos listos para finalizar la compra.
+- Formulario con datos personales del comprador, previo a confirmar la compra.
+- Generador de ID de la compra, la orden de compra es subida a la base de datos de Firebase.
 
 ## Instalación
 
@@ -37,6 +40,10 @@ Uso de Bootstrap para dar formato a la aplicación.
 
 Uso de React Router Dom para la navegación.
 
+Uso de Lottie para el loader.
+
+Uso de Firebase para base de datos de productos y órdenes de compra.
+
 
 
 ## Funcionamiento de la App
@@ -49,4 +56,4 @@ Uso de React Router Dom para la navegación.
 
 Juan Pablo Ribero Mazzoni
 
-2021 - Proyecto Final de Curso React Js de CoderHouse
+2022 - Proyecto Final de Curso React Js de CoderHouse
