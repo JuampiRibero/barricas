@@ -9,56 +9,67 @@ import './styles.css';
 const Form = () => {
     const { cart, clearCart, totalCart} = useCartContext();
     const [id, setId] = useState("");
-    const [datosUser, setDatosUser] = useState({
-        nombre: " ",
-        email: " ",
-        tel: 0,
+    const [datosUsuario, setDatosUsuario] = useState({
+        nombre: '',
+        apellido: '',
+        email: '',
+        tel: 0
     });
 
     const handleInputChange = (e) => {
-        setDatosUser({
-            ...datosUser,
-            [e.target.name]: e.target.value
-        });
+        setDatosUsuario({...datosUsuario, [e.target.name]: e.target.value});
     };
 
     const pedido = {
-        cliente: datosUser,
+        cliente: datosUsuario,
         productos: cart,
         total: totalCart(),
         fecha: firebase.firestore.Timestamp.fromDate(new Date()),
     };
 
     const confirmOrder = (e) => {
-        e.preventDefault();
-        const db = getFirestore();
-        const orderCollection = db.collection("orders");
-        const query = orderCollection.add(pedido);
-        query
-            .then(({ id }) => {
-                setId(id);
-            })
-            .catch(() => {
-                console.log("error");
-            })
-            clearCart();
+        if(
+            datosUsuario.nombre.length < 2 ||
+            datosUsuario.apellido.length < 2 ||
+            datosUsuario.email.length < 6 ||
+            datosUsuario.tel.length < 10
+        ){
+            alert('Por favor, completa todos tus datos.');
+            return;
+        } else if (cart.length === 0) {
+            alert('Vuelve a la tienda para continuar comprando.');
+            return;
+        }
+            e.preventDefault();
+            const db = getFirestore();
+            const orderCollection = db.collection("orders");
+            const query = orderCollection.add(pedido);
+            query
+                .then(({ id }) => {
+                    setId(id);
+                })
+                .catch(() => {
+                    console.log("error");
+                })
+                clearCart();
     };
 
     if (id === "") {
         return (
-            <form className="form-user">
-                <h1>Completa tus datos</h1>
+            <form className="form-usuario">
+                <h1>Ingresá tus datos</h1>
                 <input onChange={handleInputChange} name="nombre" type="text" placeholder="Nombre" required />
+                <input onChange={handleInputChange} name="apellido" type="text" placeholder="Apellido" required />
                 <input onChange={handleInputChange} name="email" type="email" placeholder="Email" required />
                 <input onChange={handleInputChange} name="tel" type="tel" placeholder="Telefono" required />
-                <button className="btn-finalizarOrders" onClick={confirmOrder}>Confirmar Compra</button>
+                <Button className='mt-3' variant="info" size="sm" onClick={confirmOrder}>Confirmar Compra</Button>
             </form>
         );
     } else {
         return (
-            <div className="form-user">
-                <h1>Gracias por tu compra</h1>
-                <p>Tu pedido se ha realizado con exito, tu id de compra es: {id}</p>
+            <div className="form-usuario">
+                <h1>¡Gracias por tu compra!</h1>
+                <p>El pedido se ha realizado con exito, el ID de tu compra es {id}</p>
                 <Link to={`/tienda`}>
                     <Button variant="info" size="sm">← Volver a la tienda</Button>
                 </Link>
