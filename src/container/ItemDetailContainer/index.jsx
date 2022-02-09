@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
         setTimeout(() => {
             itemCollection.get().then((value) => {
                 if(value === 0) {
-                    console.log('No results!');
+                    console.log('No se encontraron resultados!');
                 }
                 let aux = value.docs.map((doc) => { 
                     return { ...doc.data(), id: doc.id };
@@ -24,10 +24,9 @@ const ItemDetailContainer = () => {
                 let single = aux.find((e) => {
                     return e.id === itemId;
                 });
-                console.log(single);
                 setItem(single);
             }).catch((error) => {
-                console.log('Error searching items', error);
+                console.log('Error al buscar items', error);
             }).finally(() => {
                 setLoading(false);
             });

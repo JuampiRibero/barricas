@@ -16,7 +16,7 @@ const ItemListContainer = ({greeting}) => {
         setTimeout(() => {
             itemCollection.get().then((value) => {
                 if(value === 0) {
-                    console.log('No results!');
+                    console.log('No se encontraron resultados!');
                 }
                 let aux = value.docs.map((doc) => { 
                     return { ...doc.data(), id: doc.id };
@@ -24,7 +24,6 @@ const ItemListContainer = ({greeting}) => {
                 const miFiltro = bodegaId
                 ? aux.filter((item) => item.bodega === bodegaId)
                 : aux;
-                console.log(miFiltro);
                 setItems(miFiltro);
             }).catch((error) => {
                 console.log('Error searching items', error);

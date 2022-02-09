@@ -32,8 +32,6 @@ export const CartProvider = ({ children }) => {
         return cart.reduce( (acum, valor) => acum + valor.quantity * valor.item.precio, 0);
     };
 
-    console.log(cart);
-
     return (
         <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clearCart, totalCart }}>
             { children }
